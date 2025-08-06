@@ -35,3 +35,19 @@ function calculatePercentage() {
 }
 
 calculatePercentage();
+
+
+/*
+Question 2
+Write a program that takes input of radius of a circle and prints the area and circumference of the circle .*/
+function calculateAreaAndCircumference() {
+    const radius = Number(prompt("Enter the radius of the circle: "));
+    const area = Math.PI * (radius ** 2);
+    const circumference = 2 * Math.PI * radius;
+    console.log(`Area of the circle: ${area.toFixed(2)}`);
+    console.log(`Circumference of the circle: ${circumference.toFixed(2)}`);
+    return area, circumference;
+}
+calculateAreaAndCircumference();
+
+
