@@ -5,8 +5,8 @@ const prompt = promptSync();
 Write a program that prints the percentage marks of high school graduates by taking input of
 sum of their obtained marks and Maximum marks.*/
 function calculatePercentage() {
-    const obtainedMarks = Number(prompt("Enter obtained marks: "));
-    const maxMarks = Number(prompt("Enter maximum marks: "));
+    let obtainedMarks = Number(prompt("Enter obtained marks: "));
+    let maxMarks = Number(prompt("Enter maximum marks: "));
     
     if (isNaN(obtainedMarks) || isNaN(maxMarks)) {
         console.log("Please enter valid numbers");
@@ -94,5 +94,32 @@ let b = Number(prompt("Enter the length of base b (second parallel side):"));
 let h = Number(prompt("Enter the height (perpendicular distance):"));
 let area = ((a + b) / 2) * h;
 console.log("The area of the trapezoid is: " + area.toFixed(2) + " square units");
+
+
+/* Write a program that takes input an integer number and prints “EVEN” if it is an even
+number and if it is an odd number than it prints “ODD”. */
+let num = Number(prompt("Enter an integer:"));
+if (num % 2 === 0) {
+    console.log("EVEN");
+} else {
+    console.log("ODD");
+}
+
+
+/*Question 8
+Area of a triangle can be calculated if lengths of
+its three sides is known by using the Heron’s
+formula which says that Square root of
+(s(s−a)(s−b)(s−c)) where s is half of the
+perimeter of the triangle that can be calculated
+by adding length of all the three sides and then
+dividing it by 2. */
+let a1 = Number(prompt("Enter length of side a:"));
+let b1 = Number(prompt("Enter length of side b:"));
+let c1 = Number(prompt("Enter length of side c:"));
+let s = (a1 + b1 + c1) / 2;
+let area1 = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+console.log("The area of the triangle is: " + area1.toFixed(2) + " square units");
+
 
 
